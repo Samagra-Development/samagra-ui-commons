@@ -1,0 +1,32 @@
+{
+  "extends": "config-tsconfig/tsconfig.nextjs.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "baseUrl": "src",
+    "paths": {
+      ".": [
+        "."
+      ]
+    }
+  },
+  // Files and folders starting with a . are ignored by the glob patterns
+  "include": [
+    ".",
+    ".eslintrc.js",
+    ".storybook/**/*",
+    "../../packages/config-mui/mui-theme.d.ts",
+    "next-env.d.ts",
+    "pages/**/*",
+    "src/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    ".turbo",
+    "coverage",
+    "dist",
+    "compiled",
+    "build-next-static",
+    "build-storybook-static"
+  ]
+}
