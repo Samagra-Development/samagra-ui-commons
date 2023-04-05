@@ -1,9 +1,6 @@
 #!/bin/sh
-. "$(dirname $0)/_/husky.sh"
+. "$(dirname "$0")/_/husky.sh"
 
 npx pinst -e
-git add package.json
-npm run type-check
-npm run lint -- --quiet
-# npm test
-
+npm run tsc
+npm run lint
